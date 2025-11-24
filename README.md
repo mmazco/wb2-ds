@@ -1,4 +1,4 @@
-# WB2 BA Demo Day Dashboard
+# WB2 BA Demo Day DS
 
 A responsive Next.js dashboard showcasing 16 World Build apps from the Buenos Aires Demo Day (November 15, 2025).
 

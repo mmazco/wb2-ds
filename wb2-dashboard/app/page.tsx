@@ -113,6 +113,13 @@ export default function Home() {
                     <div className="metrics-label">Suggested Key Metrics for Growth</div>
                     <div className="metrics-value">{app.metric}</div>
                   </div>
+
+                  {app.team && (
+                    <div className="metrics-section">
+                      <div className="metrics-label">Team</div>
+                      <div className="metrics-value">{app.team}</div>
+                    </div>
+                  )}
                   
                   <div className="scores">
                     <div className="score-item">

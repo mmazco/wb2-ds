@@ -70,9 +70,9 @@ export default function ScatterChart({ apps, onOpenModal }: ScatterChartProps) {
     };
   });
 
-  const gridColor = theme === "dark" ? "rgba(255, 255, 255, 0.08)" : "#e5e5e5";
-  const axisColor = theme === "dark" ? "rgba(255, 255, 255, 0.3)" : "#999";
-  const textColor = theme === "dark" ? "#e5e5e5" : "#666";
+  const gridColor = theme === "dark" ? "rgba(255, 255, 255, 0.1)" : "#e5e5e5";
+  const axisColor = theme === "dark" ? "rgba(255, 255, 255, 0.4)" : "#999";
+  const textColor = theme === "dark" ? "#ffffff" : "#666";
   const labelColor = theme === "dark" ? "#ffffff" : "#333";
 
   const options: ChartOptions<"scatter"> = {

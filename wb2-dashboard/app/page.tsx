@@ -71,7 +71,7 @@ export default function Home() {
       {/* Main Content */}
       <main className="main-container">
         {activeTab === "Utility vs Rewards" ? (
-          <ScatterChart apps={apps} onOpenModal={() => setIsModalOpen(true)} />
+          <ScatterChart apps={apps} onOpenModal={() => setIsModalOpen(true)} theme={theme} />
         ) : (
           <>
             <div className="section-header">

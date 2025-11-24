@@ -14,7 +14,6 @@ import {
 } from "chart.js";
 import { Scatter } from "react-chartjs-2";
 import { App, Category } from "../types";
-import { useTheme } from "../hooks/useTheme";
 import { useIsMobile } from "../hooks/useMediaQuery";
 
 ChartJS.register(
@@ -30,6 +29,7 @@ ChartJS.register(
 interface ScatterChartProps {
   apps: App[];
   onOpenModal: () => void;
+  theme: "dark" | "light";
 }
 
 // Category colors
@@ -41,8 +41,7 @@ const categoryColors: Record<Category, string> = {
   "Commerce & Attention": "#8b5cf6", // purple
 };
 
-export default function ScatterChart({ apps, onOpenModal }: ScatterChartProps) {
-  const { theme } = useTheme();
+export default function ScatterChart({ apps, onOpenModal, theme }: ScatterChartProps) {
   const isMobile = useIsMobile();
   const [chartKey, setChartKey] = useState(0);
 

@@ -70,8 +70,10 @@ export default function ScatterChart({ apps, onOpenModal }: ScatterChartProps) {
     };
   });
 
-  const gridColor = theme === "dark" ? "#1f1f1f" : "#e5e5e5";
-  const textColor = theme === "dark" ? "#888" : "#666";
+  const gridColor = theme === "dark" ? "rgba(255, 255, 255, 0.08)" : "#e5e5e5";
+  const axisColor = theme === "dark" ? "rgba(255, 255, 255, 0.3)" : "#999";
+  const textColor = theme === "dark" ? "#e5e5e5" : "#666";
+  const labelColor = theme === "dark" ? "#ffffff" : "#333";
 
   const options: ChartOptions<"scatter"> = {
     responsive: true,
@@ -81,12 +83,15 @@ export default function ScatterChart({ apps, onOpenModal }: ScatterChartProps) {
         type: "linear",
         min: 0,
         max: 100,
+        border: {
+          color: axisColor,
+        },
         title: {
           display: true,
           text: "Utility Score",
-          color: textColor,
+          color: labelColor,
           font: {
-            size: isMobile ? 11 : 13,
+            size: isMobile ? 12 : 14,
             weight: 600,
           },
         },
@@ -96,7 +101,7 @@ export default function ScatterChart({ apps, onOpenModal }: ScatterChartProps) {
         ticks: {
           color: textColor,
           font: {
-            size: isMobile ? 10 : 11,
+            size: isMobile ? 10 : 12,
           },
           callback: function(value) {
             return value + "%";
@@ -107,12 +112,15 @@ export default function ScatterChart({ apps, onOpenModal }: ScatterChartProps) {
         type: "linear",
         min: 0,
         max: 100,
+        border: {
+          color: axisColor,
+        },
         title: {
           display: true,
           text: "Rewards Dependency",
-          color: textColor,
+          color: labelColor,
           font: {
-            size: isMobile ? 11 : 13,
+            size: isMobile ? 12 : 14,
             weight: 600,
           },
         },
@@ -122,7 +130,7 @@ export default function ScatterChart({ apps, onOpenModal }: ScatterChartProps) {
         ticks: {
           color: textColor,
           font: {
-            size: isMobile ? 10 : 11,
+            size: isMobile ? 10 : 12,
           },
           callback: function(value) {
             return value + "%";
@@ -135,7 +143,7 @@ export default function ScatterChart({ apps, onOpenModal }: ScatterChartProps) {
         display: true,
         position: "bottom" as const,
         labels: {
-          color: textColor,
+          color: labelColor,
           font: {
             size: isMobile ? 10 : 12,
           },
